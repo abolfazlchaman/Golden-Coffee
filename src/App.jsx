@@ -1,12 +1,22 @@
-import { useState } from "react";
+import Hero from "./components/Hero/Hero";
+import NewProducts from "./components/NewProducts/NewProducts";
+import CategoryBanner from "./components/CategoryBanner/CategoryBanner";
+import BestSelling from "./components/BestSelling/BestSelling";
+import Club from "./components/Club/Club";
+import Blog from "./components/Blog/Blog";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <main className="bg-gray-100 dark:bg-zinc-800">
+      <Hero />
+      <NewProducts />
+      <CategoryBanner />
+      <BestSelling />
+      <Club />
+      <Blog />
+      <Footer />
+    </main>
   );
 }
 
