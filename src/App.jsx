@@ -4,6 +4,7 @@ import CategoryBanner from "./components/CategoryBanner/CategoryBanner";
 import BestSelling from "./components/BestSelling/BestSelling";
 import Club from "./components/Club/Club";
 import Blog from "./components/Blog/Blog";
+import Order from "./components/Order/Order";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <BestSelling />
       <Club />
       <Blog />
+      <Order />
       <Footer />
     </main>
   );
