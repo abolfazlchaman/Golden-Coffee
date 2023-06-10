@@ -5,7 +5,7 @@ const config = {
     require("autoprefixer"),
     require("postcss-nested"),
     require("postcss-normalize")(),
-    require("postcss-autoreset")(),
+    // require("postcss-autoreset")(),
   ],
 };
 
