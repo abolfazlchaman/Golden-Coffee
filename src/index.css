@@ -39,7 +39,16 @@
     font-display: swap;
   }
 
-  body{
+  body {
     @apply font-Dana;
+  }
+  .hero {
+    background-image: url("./assets/headerBgDesktop.webp");
+    @apply bg-center bg-cover max-w-full max-h-full bg-no-repeat;
+  }
+  .new-product{
+    background-image: url("./assets/body-bg.png");
+    @apply bg-top bg-contain max-w-full max-h-full bg-no-repeat;
+
   }
 }
