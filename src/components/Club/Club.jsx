@@ -6,7 +6,7 @@ import DiscoveryIMG from "../../assets/club/Discovery.svg";
 
 function Club() {
   return (
-    <div className="flex h-36 flex-row mx-40 from-green-600 to-green-500 bg-gradient-to-b rounded-2xl justify-around items-center">
+    <div className="flex h-36 flex-row mx-40 from-emerald-600 to-emerald-500 bg-gradient-to-b rounded-2xl justify-around items-center">
       <img
         className="w-auto h-24"
         src={diamongIMG}

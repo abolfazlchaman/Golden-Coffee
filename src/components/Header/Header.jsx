@@ -117,7 +117,7 @@ function Header({ items }) {
           </div>
         </div>
       </nav>
-      <div className="relative h-full flex flex-col items-end justify-center text-end left-80 text-white z-10">
+      <div className="relative h-full flex flex-col items-end justify-center text-end left-32 text-white z-10">
         <div className="text-right">
           <p className="drop-shadow-lg font-MorabbaBold text-6xl pb-2 text-right">
             قهوه عربیکا تانزانیا
@@ -128,6 +128,31 @@ function Header({ items }) {
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
             کمربند قهوه کشت میشود.
           </p>
+        </div>
+      </div>
+      <div
+        className="max-w-screen flex flex-row items-center justify-center "
+        style={{ position: "relative", top: "-100px" }}>
+        <div className="flex flex-row items-center justify-center border border-white border-opacity-25 w-[200px] h-[200px] rounded-full">
+          <div className="flex flex-row items-center justify-center border border-white border-opacity-50 w-[145px] h-[145px] rounded-full">
+            <div className="flex flex-row items-center justify-center border border-white border-opacity-90 w-[95px] h-[95px] rounded-full">
+              <button className="rounded-full w-7 h-7 border-2 bg-gray-100 border-orange-300 text-zinc-700 cursor-pointer flex items-center justify-center p-0 m-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-3 h-3">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>

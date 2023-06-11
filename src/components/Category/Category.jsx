@@ -6,7 +6,7 @@ function Category({ img, title }) {
         src={img}
         alt={title}
       />
-      <h4 className="text-center font-DanaMedium">{title}</h4>
+      <h4 className="text-center font-DanaDemiBold">{title}</h4>
     </div>
   );
 }
