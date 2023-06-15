@@ -40,6 +40,8 @@
   }
 
   body {
+    /* remove commented for production */
+    /* @apply select-none; */
     @apply font-Dana;
   }
   .hero {
