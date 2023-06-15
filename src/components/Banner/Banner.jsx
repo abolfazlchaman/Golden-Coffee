@@ -1,7 +1,8 @@
 function Banner({ img, title, sub }) {
   return (
-    <div className="rounded-3xl overflow-hidden relative">
+    <div className="rounded-3xl overflow-hidden relative w-2/5 flex-grow">
       <img
+        className="w-full"
         src={img}
         alt={title}
       />

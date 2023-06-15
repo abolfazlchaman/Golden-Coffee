@@ -43,7 +43,7 @@ function Order() {
         </div>
       </div>
       <svg href={icon1}></svg>
-      <div className="flex flex-row gap-20 pb-36 justify-between">
+      <div className="flex flex-row flex-wrap gap-1 pb-36 2xl:justify-between justify-around space-y-6">
         <Perk
           title="پشتیبانی شبانه روزی"
           sub="7 روز هفته ، 24 ساعته"

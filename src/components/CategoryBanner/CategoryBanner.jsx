@@ -28,7 +28,7 @@ function CategoryBanner() {
         />
       </div>
 
-      <div className="flex flex-row gap-16">
+      <div className="flex flex-row gap-16 justify-between">
         <Category
           title="قهوه دمی و اسپرسو"
           img={category1IMG}

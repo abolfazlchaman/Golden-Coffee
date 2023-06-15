@@ -41,15 +41,18 @@ function Header({ items }) {
             alt="logo"
           />
           {items?.map((title, i) => (
-            <HashLink
-              smooth
-              key={title}
-              to="#"
-              className={`flex text-center items-center mr-9 cursor-pointer hover:text-orange-300 transition-all ${
-                i === 0 ? "text-orange-200" : "text-gray-300"
-              }`}>
-              {title?.trim()}
-            </HashLink>
+            <div className="flex justify-center items-center  sm:mx-1 lg:mx-3 xl:mx-4">
+              <HashLink
+              onClick={(e)=>e.stopPropagation()}
+                smooth
+                key={title}
+                to="#"
+                className={`flex text-center items-center cursor-pointer hover:text-orange-300 transition-all ${
+                  i === 0 ? "text-orange-200" : "text-gray-300"
+                }`}>
+                {title?.trim()}
+              </HashLink>
+            </div>
           ))}
         </div>
         <div className="flex flex-row ml-5 text-orange-200 items-center gap-1">
@@ -92,7 +95,9 @@ function Header({ items }) {
                   </svg>
                 </i>
 
-                <h2 className="font-Dana text-zinc-700 dark:text-white ">هنوز محصولی به سبد خرید اضافه نشده</h2>
+                <h2 className="font-Dana text-zinc-700 dark:text-white ">
+                  هنوز محصولی به سبد خرید اضافه نشده
+                </h2>
                 <HashLink
                   to="/#new-products"
                   smooth
