@@ -14,9 +14,9 @@ function Club() {
       />
       <div className="flex flex-col text-right justify-center text-white">
         <h3>کافی کلاب</h3>
-        <h5>میدونستی میتونی با امتیاز هات قهوه بگیری؟</h5>
+        <h5 className="text-justify m-2">میدونستی میتونی با امتیاز هات قهوه بگیری؟</h5>
       </div>
-      <div className="flex flex-row gap-5 justify-center items-center">
+      <div className="flex flex-row gap-5 justify-center items-center text-teal-600">
         <div className="flex flex-col rounded-2xl w-24 h-24 items-center justify-center  bg-white">
           <img
             src={ActivityIMG}
@@ -42,7 +42,7 @@ function Club() {
       <div className="flex flex-col justify-center text-white cursor-pointer">
         <p className="pr-2">۵۴۲</p>
         <p className="pr-2">امتیاز شما</p>
-        <div className="flex flex-row p-1 items-center from-orange-400 to-orange-300 bg-gradient-to-l rounded-full">
+        <div className="mx-2 flex flex-row p-1 items-center from-orange-400 to-orange-300 bg-gradient-to-l rounded-full min-w-[120px]">
           <p>دریافت جایزه</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

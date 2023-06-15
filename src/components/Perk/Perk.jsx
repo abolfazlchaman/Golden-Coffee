@@ -9,8 +9,9 @@ function Perk({ title, sub, icon }) {
       />
 
       <div className="flex flex-col  pr-4">
-        <p className="font-DanaMedium flex-nowrap text-lg min-w-fit">{title}</p>
-        <p className="font-Dana text-sm">{sub}</p>
+        <p className="font-DanaMedium flex-nowrap text-lg min-w-fit text-center min-h-[5rem] items-center justify-center flex">{title}</p>
+        <br />
+        <p className="font-Dana text-sm text-justify">{sub}</p>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 function Star({ type }) {
   return (
     <svg
-      className={type === "filled" ? "fill-gray-700 w-6 h-6" : " fill-yellow-400 w-6 h-6"}
+      className={
+        type === "filled" ? "fill-gray-700 dark:fill-gray-400 w-6 h-6" : " fill-yellow-400 w-6 h-6"
+      }
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       strokeWidth={1.5}>

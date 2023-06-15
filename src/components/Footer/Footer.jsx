@@ -1,4 +1,5 @@
-import logo1IMG from "../../assets/app-logo.png";
+import logo1IMG from "../../assets/svgs/logo.svg";
+import logowhiteIMG from "../../assets/svgs/logo-white.svg";
 import logo2IMG from "../../assets/svgs/logo-type.svg";
 
 import telegramIMG from "../../assets/svgs/telegram.svg";
@@ -26,11 +27,12 @@ function Footer() {
           </svg>
         </button>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-between">
         <div className="w-2/6">
           <div className="flex flex-row gap-5">
             <img
-              src={logo1IMG}
+              className="fill-gray-300 !important"
+              src={logowhiteIMG}
               alt="logo1"
             />
             <img
@@ -45,10 +47,10 @@ function Footer() {
             می‌کوشیم.
           </p>
         </div>
-        <div className="flex flex-col w-2/6 justify-end text-gray-300 pr-24">
-          <h4 className="font-DanaDemiBold text-white pb-6">دسترسی سریع</h4>
+        <div className="flex flex-col w-2/6 justify-end text-gray-300 items-center">
+          <h4 className="font-DanaDemiBold text-white pb-6 text-right">دسترسی سریع</h4>
 
-          <div className="flex flex-row gap-8">
+          <div className="flex xl:flex-row lg:flex-col gap-8">
             <div className="flex flex-col font-Dana text-sm items-start justify-center  space-y-8">
               <h6>- حریم خصوصی</h6>
               <h6>- عودت کالا</h6>
@@ -63,7 +65,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-3/6 justify-end text-gray-300 pr-24">
+        <div className="flex flex-col w-3/6 text-gray-300 items-center justify-center">
           <h4 className="font-DanaDemiBold text-white pb-6">در تماس باشیم</h4>
 
           <div className="flex flex-row gap-8">
@@ -84,7 +86,7 @@ function Footer() {
               <div
                 className="flex flex-row gap-6 font-DanaMedium items-center"
                 dir="ltr">
-                <button className="text-zinc-700 border-orange-300 border rounded-xl flex flex-row items-center p-2 from-orange-300 to-orange-300 bg-gradient-to-bl">
+                <button className="text-zinc-700 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2 from-orange-300 to-orange-300 bg-gradient-to-bl">
                   @golden_coffee
                   <img
                     className="fill-zinc-700 text-zinc-700 stroke-zinc-700"
@@ -92,7 +94,7 @@ function Footer() {
                     alt="telegram"
                   />
                 </button>
-                <button className="text-orange-300 border-orange-300 border rounded-xl flex flex-row items-center p-2">
+                <button className="text-orange-300 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2">
                   @golden_coffee
                   <img
                     className="fill-orange-300 text-orange-300"

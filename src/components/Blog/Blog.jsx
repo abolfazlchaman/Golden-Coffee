@@ -10,7 +10,9 @@ function Blog() {
     <div className="px-40 p-20 pb-28">
       <div className="flex flex-row w-full justify-between">
         <div className="flex flex-col">
-          <h4 className="font-MorabbaMedium text-5xl text-zinc-700 pb-12">مطالب خواندنی</h4>
+          <h4 className="font-MorabbaMedium text-5xl text-zinc-700 pb-12 dark:text-white">
+            مطالب خواندنی
+          </h4>
         </div>
         <div className="flex flex-row items-center mb-2 text-orange-300 cursor-pointer">
           <h6 className="font-Dana">مشاهده همه مطالب</h6>
@@ -46,7 +48,7 @@ function Blog() {
           date="۱۴ مرداد ۱۴۰۲"
         />
         <Article
-          title="طرز تهیه قهوه دالگونا مناسب روزهای گرم تابستان"
+          title="طرز تهیه قهوه دالگونا مناسب تابستان"
           img={blog4IMG}
           date="۱۱ مرداد ۱۴۰۲"
         />

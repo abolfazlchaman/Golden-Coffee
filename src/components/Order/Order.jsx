@@ -8,7 +8,7 @@ import icon4 from "../../assets/svgs/services/pitcher.svg";
 
 function Order() {
   return (
-    <div className="flex flex-col px-40">
+    <div className="flex flex-col px-40 dark:text-white">
       <div className="flex flex-row items-center">
         <div>
           <img src={mainIMG} />
@@ -43,7 +43,7 @@ function Order() {
         </div>
       </div>
       <svg href={icon1}></svg>
-      <div className="flex flex-row gap-20 pb-36">
+      <div className="flex flex-row gap-20 pb-36 justify-between">
         <Perk
           title="پشتیبانی شبانه روزی"
           sub="7 روز هفته ، 24 ساعته"

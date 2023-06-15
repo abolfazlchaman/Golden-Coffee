@@ -8,12 +8,16 @@ import product4 from "../../assets/products/p4.png";
 
 function NewProducts() {
   return (
-    <section className="new-product">
+    <section
+      className="new-product"
+      id="new-products">
       <div className="mx-40 pb-20">
         <div className="flex flex-row w-full justify-between pt-48">
           <div className="flex flex-col">
-            <h2 className="font-MorabbaMedium text-5xl text-zinc-700 mb-2">جدیدترین محصولات</h2>
-            <h5 className="font-MorabbaLight text-3xl text-zinc-700 mb-12">
+            <h2 className="font-MorabbaMedium text-5xl text-zinc-700 mb-2 dark:text-white">
+              جدیدترین محصولات
+            </h2>
+            <h5 className="font-MorabbaLight text-3xl text-zinc-700 mb-12 dark:text-white">
               فرآوری شده از دانه قهوه
             </h5>
           </div>
@@ -34,59 +38,55 @@ function NewProducts() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col gap-5 max-w-screen relative right-0">
-          <div className="flex flex-row gap-5">
-            <Item
-              img={product1}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              starCount={4}
-            />
-            <Item
-              img={product2}
-              title="قهوه ترک بن مانو 250 گرم"
-              starCount={3}
-            />
-            <Item
-              img={product3}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              offer="۱۵۴,۰۰۰"
-              starCount={5}
-            />
-            <Item
-              img={product4}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              starCount={4}
-            />
-          </div>
-          <div className="flex flex-row gap-5">
-            <Item
-              img={product4}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              offer="۱۵۴,۰۰۰"
-              starCount={4}
-            />
-            <Item
-              img={product3}
-              title="قهوه ترک بن مانو 250 گرم"
-              starCount={2}
-            />
-            <Item
-              img={product2}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              starCount={5}
-            />
-            <Item
-              img={product1}
-              title="قهوه ترک بن مانو 250 گرم"
-              price="۱۷۵,۰۰۰"
-              starCount={4}
-            />
-          </div>
+        <div className="flex flex-row flex-wrap justify-between gap-5 max-w-screen relative right-0">
+          <Item
+            img={product1}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            starCount={4}
+          />
+          <Item
+            img={product2}
+            title="قهوه ترک بن مانو 250 گرم"
+            starCount={3}
+          />
+          <Item
+            img={product3}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            offer="۱۵۴,۰۰۰"
+            starCount={5}
+          />
+          <Item
+            img={product4}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            starCount={4}
+          />
+          <Item
+            img={product4}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            offer="۱۵۴,۰۰۰"
+            starCount={4}
+          />
+          <Item
+            img={product3}
+            title="قهوه ترک بن مانو 250 گرم"
+            starCount={2}
+          />
+          <Item
+            img={product2}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            starCount={5}
+          />
+          <Item
+            img={product1}
+            title="قهوه ترک بن مانو 250 گرم"
+            price="۱۷۵,۰۰۰"
+            starCount={4}
+          />
         </div>
       </div>
     </section>
