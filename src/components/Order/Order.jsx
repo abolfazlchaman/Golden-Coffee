@@ -14,7 +14,7 @@ function Order() {
           <img src={mainIMG} />
         </div>
         <div className="flex flex-col pr-5">
-          <p className="font-MorabbaMedium text-5xl pb-[6px]">یکی از بهترین قهوه ها!</p>
+          <p className="font-MorabbaMedium text-3xl lg:text-5xl pb-[6px]">یکی از بهترین قهوه ها!</p>
           <p className="font-MorabbaLight text-3xl pb-6">کیفیت قهوه را از ما بخواهید...</p>
           <p className="font-MorabbaLight text-3xl">. . .</p>
           <p className="font-MorabbaLight text-2xl py-6 text-justify">

@@ -10,8 +10,8 @@ function Article({ img, title, date }) {
         <p className="w-4/5 pl-1 flex text-lg mr-2.5 text-zinc-700 dark:text-white text-justify ml-1 font-DanaMedium">
           {title}
         </p>
-        <div className="bg-white bg-opacity-20 h-[1px] w-8/10 mt-16 mx-2"></div>
-        <div className="flex flex-row justify-between mx-2">
+        <div className="bg-white bg-opacity-20 h-[1px] w-8/10 mt-16 mb-2 mx-2 lg:hidden"></div>
+        <div className="flex flex-row justify-between mx-2  lg:justify-center">
           <p className="lg:w-1/5 pl-5 text-center text-teal-600 ml-2 items-center flex">{date}</p>
           <p className="cursor-pointer lg:w-1/5 flex pl-5 text-center ml-2 items-center lg:hidden bg-orange-300 bg-opacity-20 p-3 rounded-md text-orange-300 w-fit justify-center">
             مطالعه

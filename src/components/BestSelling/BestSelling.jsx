@@ -10,10 +10,10 @@ function BestSelling() {
       <div className="mx-6 lg:mx-40 pb-20">
         <div className="flex flex-row w-full justify-between pt-28">
           <div className="flex flex-col">
-            <h2 className="font-MorabbaMedium text-5xl text-zinc-700 mb-2 dark:text-white">
+            <h2 className="font-MorabbaMedium text-xl lg:text-5xl text-zinc-700 mb-2 dark:text-white">
               محصولات پر فروش
             </h2>
-            <h5 className="font-MorabbaLight text-3xl text-zinc-700 mb-12 dark:text-white">
+            <h5 className="font-MorabbaLight  lg:text-3xl text-zinc-700 mb-12 dark:text-white">
               پیشنهاد قهوه خورها...
             </h5>
           </div>
@@ -25,7 +25,7 @@ function BestSelling() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 dark:stroke-white rotate-180">
+                className="w-3 lg:w-6 h-3 lg:h-6 dark:stroke-white rotate-180">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -40,7 +40,7 @@ function BestSelling() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 dark:stroke-white">
+                className="w-3 lg:w-6 h-3 lg:h-6 dark:stroke-white">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
