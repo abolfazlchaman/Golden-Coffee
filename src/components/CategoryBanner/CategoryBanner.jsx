@@ -14,8 +14,8 @@ import Category from "../Category/Category";
 
 function CategoryBanner() {
   return (
-    <div className="mx-40">
-      <div className="flex flex-row max-w-screen pb-20 gap-5">
+    <div className="mx-4 lg:mx-40">
+      <div className="flex flex-col lg:flex-row max-w-screen pb-20 gap-5">
         <Banner
           img={banner2IMG}
           title="انواع قهوه"
@@ -28,7 +28,7 @@ function CategoryBanner() {
         />
       </div>
 
-      <div className="flex flex-row gap-16 justify-between">
+      <div className="flex flex-row flex-wrap lg:flex-nowrap gap-16 justify-center lg:justify-between">
         <Category
           title="قهوه دمی و اسپرسو"
           img={category1IMG}

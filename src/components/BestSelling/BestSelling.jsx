@@ -7,7 +7,7 @@ import Item from "../Item/Item";
 function BestSelling() {
   return (
     <section>
-      <div className="mx-40 pb-20">
+      <div className="mx-6 lg:mx-40 pb-20">
         <div className="flex flex-row w-full justify-between pt-28">
           <div className="flex flex-col">
             <h2 className="font-MorabbaMedium text-5xl text-zinc-700 mb-2 dark:text-white">
@@ -50,7 +50,7 @@ function BestSelling() {
             </i>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap justify-between gap-5 max-w-screen relative right-0">
+        <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"

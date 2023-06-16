@@ -11,8 +11,8 @@ function NewProducts() {
     <section
       className="new-product"
       id="new-products">
-      <div className="mx-40 pb-20">
-        <div className="flex flex-row w-full justify-between pt-48">
+      <div className="mx-6 lg:mx-40 pb-20">
+        <div className="flex flex-row w-full justify-between pt-8 lg:pt-48">
           <div className="flex flex-col">
             <h2 className="font-MorabbaMedium text-5xl text-zinc-700 mb-2 dark:text-white">
               جدیدترین محصولات
@@ -38,7 +38,7 @@ function NewProducts() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap justify-between gap-5 max-w-screen relative right-0">
+        <div className="flex flex-row flex-wrap sm:justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"

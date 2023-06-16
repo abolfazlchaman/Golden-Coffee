@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import CardBorder from "../CardBorder/CardBorder";
 
+import mobileLogo from "../../assets/svgs/logo-type.svg";
+
 function Header({ items }) {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -28,12 +30,13 @@ function Header({ items }) {
 
   return (
     <header
-      className="w-screen h-screen min-h-fit text-xl hero font-Dana text-[14px] "
+      className="w-screen pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px] "
       onClick={() => {
         setIsCartOpen(false);
         setIsQuickPanelOpen(false);
       }}>
-      <nav className="w-[90%] mx-auto shadow-shadow-normal rounded-3xl justify-between bg-black/50 backdrop-blur-[6px] fixed flex flex-row top-[.5rem] left-0 right-0 h-[4rem] max-h-[96px] items-center z-50">
+      {/* desktop nav */}
+      <nav className="w-[90%] hidden mx-auto shadow-shadow-normal rounded-3xl justify-between bg-black/50 backdrop-blur-[6px] fixed lg:flex flex-row top-[.5rem] left-0 right-0 h-[4rem] max-h-[96px] items-center z-50">
         <div className="flex flex-row">
           <img
             src="/src/assets/app-logo.png"
@@ -43,7 +46,7 @@ function Header({ items }) {
           {items?.map((title, i) => (
             <div className="flex justify-center items-center  sm:mx-1 lg:mx-3 xl:mx-4">
               <HashLink
-              onClick={(e)=>e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
                 smooth
                 key={title}
                 to="#"
@@ -301,21 +304,56 @@ function Header({ items }) {
           )}
         </div>
       </nav>
-      <div className="relative h-full flex flex-col items-end justify-center text-end left-32 text-white z-10">
-        <div className="text-right">
-          <p className="drop-shadow-lg font-MorabbaBold text-6xl pb-2 text-right">
+      {/* mobile nav */}
+      <nav className="lg:hidden w-screen max-w-screen h-20 justify-between bg-zinc-700 fixed top-0 flex flex-row items-center z-50 px-5">
+        <i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-10 h-10 stroke-white">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </i>
+        <img
+          src={mobileLogo}
+          alt="Golden Coffee"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="fill-white"
+          className="w-10 h-10 stroke-white">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+          />
+        </svg>
+      </nav>
+      <div className="relative h-full max-lg:w-screen flex flex-col items-end justify-center text-end pt-6 pb-12 lg:left-16 lg:mt-0 lg:left-32 text-white z-10">
+        <div className="text-right max-lg:mx-8 max-lg:mr-28">
+          <p className="drop-shadow-lg font-MorabbaBold text-2xl lg:text-6xl pb-2 text-right">
             قهوه عربیکا تانزانیا
           </p>
-          <p className="drop-shadow-lg font-MorabbaLight text-5xl pb-6">یک فنجان بالانس!</p>
+          <p className="drop-shadow-lg font-MorabbaLight text-md lg:text-5xl pb-6">یک فنجان بالانس!</p>
           <div className="bg-[#EDB56A] w-24 h-0.5"></div>
-          <p className="drop-shadow-lg left-0 w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
+          <p className="drop-shadow-lg left-0 w-full text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
             کمربند قهوه کشت میشود.
           </p>
         </div>
       </div>
       <div
-        className="max-w-screen flex flex-row items-center justify-center "
+        className="max-w-screen lg:flex flex-row items-center justify-center hidden"
         style={{ position: "relative", top: "-100px" }}>
         <div className="flex flex-row items-center justify-center border border-white border-opacity-25 w-[200px] h-[200px] rounded-full">
           <div className="flex flex-row items-center justify-center border border-white border-opacity-50 w-[145px] h-[145px] rounded-full">

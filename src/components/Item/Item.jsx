@@ -2,7 +2,7 @@ import Star from "../icons/Star";
 
 function Item({ img, title, price, offer, starCount }) {
   return (
-    <section className="w-1/5 min-w-[220px] h-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
+    <section className="w-5/11 lg:w-1/5 lg:min-w-[220px] h-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
       <img
         src={img}
         alt={title}

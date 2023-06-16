@@ -1,6 +1,6 @@
 function Category({ img, title }) {
   return (
-    <div className="flex flex-col cursor-pointer">
+    <div className="flex flex-col cursor-pointer w-1/4 lg:w-auto">
       <img
         className=""
         src={img}

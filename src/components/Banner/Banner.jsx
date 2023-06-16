@@ -1,6 +1,6 @@
 function Banner({ img, title, sub }) {
   return (
-    <div className="rounded-3xl overflow-hidden relative w-2/5 flex-grow">
+    <div className="rounded-3xl overflow-hidden relative m-4 lg:w-2/5 flex-grow">
       <img
         className="w-full"
         src={img}

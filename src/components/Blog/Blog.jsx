@@ -7,7 +7,7 @@ import Article from "../Article/Article";
 
 function Blog() {
   return (
-    <div className="px-40 p-20 pb-28">
+    <div className="px-6 lg:px-40 p-20 pb-28">
       <div className="flex flex-row w-full justify-between">
         <div className="flex flex-col">
           <h4 className="font-MorabbaMedium text-5xl text-zinc-700 pb-12 dark:text-white">
@@ -31,7 +31,7 @@ function Blog() {
           </svg>
         </div>
       </div>
-      <div className="flex flex-row gap-8">
+      <div className="flex flex-row justify-between flex-wrap gap-8">
         <Article
           title="طرز تهیه قهوه دمی با دستگاه اروپرس"
           img={blog1IMG}
