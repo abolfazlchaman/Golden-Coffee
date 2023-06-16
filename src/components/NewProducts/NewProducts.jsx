@@ -38,7 +38,7 @@ function NewProducts() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap sm:justify-center lg:justify-between gap-5 max-w-screen relative right-0">
+        <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"
