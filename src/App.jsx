@@ -8,9 +8,8 @@ import Order from "./components/Order/Order";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  //! remove test class name screen size queries
   return (
-    <main className="bg-gray-100 dark:bg-zinc-800 sm:hidden md:hidden lg:block xl:block 2xl:block">
+    <main className="bg-gray-100 dark:bg-zinc-800 ">
       <Hero />
       <NewProducts />
       <CategoryBanner />
