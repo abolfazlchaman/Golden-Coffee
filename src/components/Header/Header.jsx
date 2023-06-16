@@ -10,6 +10,9 @@ function Header({ items }) {
   const [isQuickPanelOpen, setIsQuickPanelOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const [isMobileCartOpen, setIsMobileCartOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const themeFlag = localStorage.getItem("theme");
     console.log(themeFlag);
@@ -31,9 +34,12 @@ function Header({ items }) {
   return (
     <header
       className="w-screen pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px] "
-      onClick={() => {
+      onClick={(e) => {
         setIsCartOpen(false);
         setIsQuickPanelOpen(false);
+        setIsMobileCartOpen(false);
+        setIsMobileMenuOpen(false);
+        e.stopPropagation();
       }}>
       {/* desktop nav */}
       <nav className="w-[90%] hidden mx-auto shadow-shadow-normal rounded-3xl justify-between bg-black/50 backdrop-blur-[6px] fixed lg:flex flex-row top-[.5rem] left-0 right-0 h-[4rem] max-h-[96px] items-center z-50">
@@ -306,7 +312,12 @@ function Header({ items }) {
       </nav>
       {/* mobile nav */}
       <nav className="lg:hidden w-screen max-w-screen h-20 justify-between bg-zinc-700 fixed top-0 flex flex-row items-center z-50 px-5">
-        <i>
+        <i
+          onClick={(e) => {
+            setIsMobileCartOpen(!isMobileCartOpen);
+            setIsMobileMenuOpen(false);
+            e.stopPropagation();
+          }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -325,26 +336,35 @@ function Header({ items }) {
           src={mobileLogo}
           alt="Golden Coffee"
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="fill-white"
-          className="w-10 h-10 stroke-white">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-          />
-        </svg>
+        <i
+          onClick={(e) => {
+            setIsMobileMenuOpen(!isMobileMenuOpen);
+            setIsMobileCartOpen(false);
+            e.stopPropagation();
+          }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="fill-white"
+            className="w-10 h-10 stroke-white">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </i>
       </nav>
       <div className="relative h-full max-lg:w-screen flex flex-col items-end justify-center text-end pt-6 pb-12 lg:left-16 lg:mt-0 lg:left-32 text-white z-10">
         <div className="text-right max-lg:mx-8 max-lg:mr-28">
           <p className="drop-shadow-lg font-MorabbaBold text-2xl lg:text-6xl pb-2 text-right">
             قهوه عربیکا تانزانیا
           </p>
-          <p className="drop-shadow-lg font-MorabbaLight text-md lg:text-5xl pb-6">یک فنجان بالانس!</p>
+          <p className="drop-shadow-lg font-MorabbaLight text-md lg:text-5xl pb-6">
+            یک فنجان بالانس!
+          </p>
           <div className="bg-[#EDB56A] w-24 h-0.5"></div>
           <p className="drop-shadow-lg left-0 w-full text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
