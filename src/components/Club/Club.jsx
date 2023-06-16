@@ -19,23 +19,23 @@ function Club() {
           <h5 className="text-justify m-2">میدونستی میتونی با امتیاز هات قهوه بگیری؟</h5>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row max-lg:flex-wrap justify-center">
         <div className="flex flex-row gap-4 w-full justify-center items-center text-teal-600">
-          <div className="flex flex-col rounded-2xl w-6/12 min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
+          <div className="flex flex-col rounded-2xl w-6/12 max-lg:min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
             <img
               src={ActivityIMG}
               className="w-12 h-12"
             />
             <h6 className="text-center">{"ماموریت ها"}</h6>
           </div>
-          <div className="flex flex-col rounded-2xl w-6/12 min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
+          <div className="flex flex-col rounded-2xl w-6/12 max-lg:min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
             <img
               src={DiscoveryIMG}
               className="w-12 h-12"
             />
             <h6 className="text-center">{"جایزه ها"}</h6>
           </div>
-          <div className="flex flex-col rounded-2xl w-6/12 min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
+          <div className="flex flex-col rounded-2xl w-6/12 max-lg:min-h-[30vw] lg:w-24 lg:h-24 items-center justify-start pt-2  bg-white">
             <img
               src={TicketIMG}
               className="w-12 h-12"
