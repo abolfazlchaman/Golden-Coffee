@@ -163,7 +163,7 @@ function Footer() {
           </a>
           .
         </p>
-        <p className="flex w-full mt-4 lg:mt-0 max-lg:items-center text-center lg:justify-end">.Copyright © 2023 Golden Coffee. All rights reserved</p>
+        <p className="flex w-full mt-4 lg:mt-0 max-lg:items-center text-center max-lg:justify-center lg:justify-end">.Copyright © 2023 Golden Coffee. All rights reserved</p>
       </div>
     </footer>
   );

@@ -33,7 +33,7 @@ function Header({ items }) {
 
   return (
     <header
-      className="w-screen pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px] "
+      className="w-screen overflow-x-hidden pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px] overflow-y-auto"
       onClick={(e) => {
         setIsCartOpen(false);
         setIsQuickPanelOpen(false);
@@ -357,8 +357,8 @@ function Header({ items }) {
           </svg>
         </i>
       </nav>
-      <div className="relative h-full max-lg:w-screen flex flex-col items-end justify-center text-end pt-6 pb-12 lg:left-16 lg:mt-0 lg:left-32 text-white z-10">
-        <div className="text-right max-lg:mx-8 max-lg:mr-28">
+      <div className="relative h-full max-w-screen w-screen flex flex-col items-end justify-center text-end overflow-clip mt-6 mb-12 lg:mt-0 lg:left-32 text-white z-10">
+        <div className="text-right max-lg:mx-8 max-lg:pr-16">
           <p className="drop-shadow-lg font-MorabbaBold text-2xl lg:text-6xl pb-2 text-right">
             قهوه عربیکا تانزانیا
           </p>
@@ -366,7 +366,7 @@ function Header({ items }) {
             یک فنجان بالانس!
           </p>
           <div className="bg-[#EDB56A] w-24 h-0.5"></div>
-          <p className="drop-shadow-lg left-0 w-full text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
+          <p className="drop-shadow-lg left-0 max-lg:w-4/5 text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
             کمربند قهوه کشت میشود.
           </p>
