@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import CardBorder from "../CardBorder/CardBorder";
 
 import mobileLogo from "../../assets/svgs/logo-type.svg";
+import CartItem from "../CartItem/CartItem";
 
-function Header({ items }) {
+function Header({ items, state }) {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isQuickPanelOpen, setIsQuickPanelOpen] = useState(false);
@@ -97,38 +97,72 @@ function Header({ items }) {
               </svg>
             </i>
             {isCartOpen && (
-              <div className="dark:bg-zinc-700  dark:text-white flex flex-col justify-around items-center min-w-[25rem] min-h-[19rem] shadow-lg bg-white border-t-[3px] border-t-[#F8B773] rounded-2xl justify-self-start">
-                <i className="pt-12">
-                  <svg
-                    className=" fill-gray-400 stroke-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="54"
-                    height="54"
-                    viewBox="0 0 15 15">
-                    <path
-                      fill="none"
-                      // stroke="currentColor"
-                      d="m.5.5l.6 2m0 0l2.4 8h11v-6a2 2 0 0 0-2-2H1.1Zm11.4 12a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-8-1a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z"
-                    />
-                  </svg>
-                </i>
-
-                <h2 className="font-Dana text-zinc-700 dark:text-white ">
-                  هنوز محصولی به سبد خرید اضافه نشده
-                </h2>
-                <HashLink
-                  to="/#new-products"
-                  smooth
-                  className="no-underline text-inherit"
-                  onClick={(e) => {
-                    setIsQuickPanelOpen(false);
-                    setIsCartOpen(false);
-                    e.stopPropagation();
-                  }}>
-                  <button className="rounded-xl bg-teal-600 font-Dana text-white w-64 h-14 flex items-center justify-center mb-12">
-                    مشاهده صفحه فروشگاه
-                  </button>
-                </HashLink>
+              <div
+                className={
+                  "dark:bg-zinc-700 dark:text-white mt-10 fixed w-[25rem] flex-col justify-around items-center min-w-[25rem] lg:min-h-[19rem] min-h-fit shadow-lg bg-gray-50 border-t-[3px] border-t-[#F8B773] rounded-2xl justify-self-start overflow-y-auto" +
+                  (state.length !== 0 && " min-w-fit h-fit max-h-screen")
+                }>
+                {state.length === 0 ? (
+                  <>
+                    <i className="pt-12">
+                      <svg
+                        className=" fill-gray-400 stroke-gray-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="54"
+                        height="54"
+                        viewBox="0 0 15 15">
+                        <path
+                          fill="none"
+                          // stroke="currentColor"
+                          d="m.5.5l.6 2m0 0l2.4 8h11v-6a2 2 0 0 0-2-2H1.1Zm11.4 12a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-8-1a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z"
+                        />
+                      </svg>
+                    </i>
+                    <h2 className="font-Dana text-zinc-700 dark:text-white ">
+                      هنوز محصولی به سبد خرید اضافه نشده
+                    </h2>
+                    <HashLink
+                      to="/#shop"
+                      smooth
+                      className="no-underline text-inherit"
+                      onClick={(e) => {
+                        setIsQuickPanelOpen(false);
+                        setIsCartOpen(false);
+                        e.stopPropagation();
+                      }}>
+                      <button className="rounded-xl bg-teal-600 font-Dana text-white w-64 h-14 flex items-center justify-center mb-12">
+                        مشاهده صفحه فروشگاه
+                      </button>
+                    </HashLink>
+                  </>
+                ) : (
+                  <div className="flex flex-col space-y-5 py-5 justify-center items-center h-fit text-black dark:text-white">
+                    <div className="flex justify-between w-full px-5">
+                      <p>{state.length} مورد</p>
+                      <p>مشاهده سبد خرید</p>
+                    </div>
+                    {state.map(({ img, title, price, offer, starCount, offerPercentage }) => (
+                      <CartItem
+                        img={img}
+                        title={title}
+                        price={price}
+                        offer={offer}
+                        starCount={starCount}
+                        offerPercentage={offerPercentage}
+                      />
+                    ))}
+                    <div className="bg-gray-300 w-80 h-[1px]" />
+                    <div className="flex flex-row font-DanaMedium w-full justify-between px-10">
+                      <div className="flex flex-col">
+                        <p className="">مبلغ قابل پرداخت</p>
+                        <p className="">350,000 تومان</p>
+                      </div>
+                      <button className="flex items-center justify-between bg-teal-600 rounded-2xl px-4 text-white">
+                        ثبت سفارش
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
