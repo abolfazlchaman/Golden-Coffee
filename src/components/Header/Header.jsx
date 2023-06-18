@@ -373,7 +373,7 @@ function Header({ items }) {
             یک فنجان بالانس!
           </p>
           <div className="bg-[#EDB56A] w-24 h-0.5"></div>
-          <p className="drop-shadow-lg left-0 max-lg:w-[70vw] max-lg:min-w-[180px] max-lg:h-fit text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
+          <p className="drop-shadow-lg left-0 max-lg:w-[70vw] max-lg:min-w-[180px] max-lg:h-fit max-lg:text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
             کمربند قهوه کشت میشود.
           </p>
