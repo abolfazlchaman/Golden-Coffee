@@ -1,6 +1,20 @@
 import Star from "../icons/Star";
 
-function Item({ img, title, price, offer, starCount, offerPercentage }) {
+function Item({ img, title, price, offer, starCount, offerPercentage, state, setState }) {
+  const handleAddItem = () => {
+    console.log("ran");
+    console.log(state);
+    const newItem = { img, title, price, offer, starCount, offerPercentage };
+    const existingItem = state.find((item) => item.title === newItem.title);
+
+    if (existingItem) {
+      existingItem.count += 1;
+      setState([...state]);
+    } else {
+      setState((prevItems) => [...prevItems, { ...newItem, count: 1 }]);
+    }
+  };
+
   return (
     <section className="w-5/11 lg:w-fit lg:min-w-[220px] h-fit w-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
       <div
@@ -28,7 +42,9 @@ function Item({ img, title, price, offer, starCount, offerPercentage }) {
         </div>
         <actions className="flex flex-row justify-between mb-7 items-center">
           <div className="flex flex-row">
-            <i className="bg-gray-100 text-gray-400 active:bg-teal-600 active:text-white dark:bg-zinc-800 dark:active:bg-emerald-500  cursor-pointer rounded-full transition-all p-2">
+            <i
+              className="bg-gray-100 text-gray-400 active:bg-teal-600 active:text-white dark:bg-zinc-800 dark:active:bg-emerald-500  cursor-pointer rounded-full transition-all p-2"
+              onClick={handleAddItem}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

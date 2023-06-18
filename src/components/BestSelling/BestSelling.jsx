@@ -4,7 +4,7 @@ import product3 from "../../assets/products/p7.png";
 import product4 from "../../assets/products/p8.png";
 import Item from "../Item/Item";
 
-function BestSelling() {
+function BestSelling({ state, setState }) {
   return (
     <section>
       <div className="mx-6 lg:mx-40 pb-20">
@@ -52,7 +52,9 @@ function BestSelling() {
         </div>
         <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
-          offerPercentage="12%"
+            state={state}
+            setState={setState}
+            offerPercentage="12%"
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
@@ -60,17 +62,23 @@ function BestSelling() {
             starCount={5}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product2}
             title="قهوه ترک بن مانو 250 گرم"
             starCount={4}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product3}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
             starCount={4}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product4}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"

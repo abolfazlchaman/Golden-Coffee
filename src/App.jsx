@@ -6,14 +6,23 @@ import Club from "./components/Club/Club";
 import Blog from "./components/Blog/Blog";
 import Order from "./components/Order/Order";
 import Footer from "./components/Footer/Footer";
+import { useState } from "react";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <main className="bg-gray-100 dark:bg-zinc-800 ">
       <Hero />
-      <NewProducts />
+      <NewProducts
+        state={cartItems}
+        setState={setCartItems}
+      />
       <CategoryBanner />
-      <BestSelling />
+      <BestSelling
+        state={cartItems}
+        setState={setCartItems}
+      />
       <Club />
       <Blog />
       <Order />

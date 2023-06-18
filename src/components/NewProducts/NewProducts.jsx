@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Item from "../Item/Item";
 
 import product1 from "../../assets/products/p1.png";
@@ -6,7 +6,7 @@ import product2 from "../../assets/products/p2.png";
 import product3 from "../../assets/products/p3.png";
 import product4 from "../../assets/products/p4.png";
 
-function NewProducts() {
+function NewProducts({ state, setState }) {
   return (
     <section
       className="new-product"
@@ -40,53 +40,69 @@ function NewProducts() {
         </div>
         <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
+            state={state}
+            setState={setState}
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
             starCount={4}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product2}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه مانوکا بن مانو 250 گرم"
             starCount={3}
           />
           <Item
+            state={state}
+            setState={setState}
             offerPercentage="12%"
             img={product3}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه پریسکا بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
             offer="۱۵۴,۰۰۰"
             starCount={5}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product4}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه آرتیمن بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
             starCount={4}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product4}
             offerPercentage="12%"
-            title="قهوه ترک بن مانو 250 گرم"
-            price="۱۷۵,۰۰۰"
-            offer="۱۵۴,۰۰۰"
+            title="قهوه آرتیمن بن مانو 200 گرم"
+            price="150,۰۰۰"
+            offer="132,۰۰۰"
             starCount={4}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product3}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه پریسکا بن مانو 200 گرم"
             starCount={2}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product2}
-            title="قهوه ترک بن مانو 250 گرم"
-            price="۱۷۵,۰۰۰"
+            title="قهوه مانوکا بن مانو 200 گرم"
+            price="150,۰۰۰"
             starCount={5}
           />
           <Item
+            state={state}
+            setState={setState}
             img={product1}
-            title="قهوه ترک بن مانو 250 گرم"
-            price="۱۷۵,۰۰۰"
+            title="قهوه ترک بن مانو 200 گرم"
+            price="150,۰۰۰"
             starCount={4}
           />
         </div>
