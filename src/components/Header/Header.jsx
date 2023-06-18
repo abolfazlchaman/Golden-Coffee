@@ -64,8 +64,9 @@ function Header({ items }) {
                 to={href || "#"}
                 className={
                   `flex text-center items-center cursor-pointer hover:text-orange-300 transition-all ${
-                    i === 0 && "text-orange-200"
-                  }` + (clickedMenuItem === title ? " text-orange-300" : " text-gray-300")
+                    i === 0 ? "text-orange-200" : " text-gray-300"
+                  }`
+                  //  + (clickedMenuItem === title ? " text-orange-300" : " text-gray-300")
                 }>
                 {title?.trim()}
               </HashLink>
