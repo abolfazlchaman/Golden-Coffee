@@ -52,6 +52,7 @@ function BestSelling() {
         </div>
         <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-5 max-w-screen relative right-0">
           <Item
+          offerPercentage="12%"
             img={product1}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"

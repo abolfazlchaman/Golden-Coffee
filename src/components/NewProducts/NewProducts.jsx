@@ -51,6 +51,7 @@ function NewProducts() {
             starCount={3}
           />
           <Item
+            offerPercentage="12%"
             img={product3}
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
@@ -65,6 +66,7 @@ function NewProducts() {
           />
           <Item
             img={product4}
+            offerPercentage="12%"
             title="قهوه ترک بن مانو 250 گرم"
             price="۱۷۵,۰۰۰"
             offer="۱۵۴,۰۰۰"

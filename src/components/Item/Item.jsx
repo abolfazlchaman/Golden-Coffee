@@ -1,8 +1,15 @@
 import Star from "../icons/Star";
 
-function Item({ img, title, price, offer, starCount }) {
+function Item({ img, title, price, offer, starCount, offerPercentage }) {
   return (
-    <section className="w-5/11 lg:w-1/5 lg:min-w-[220px] h-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
+    <section className="w-5/11 lg:w-fit lg:min-w-[220px] h-fit w-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
+      <div
+        className={
+          "w-14 h-7 rounded-full relative top-4 right-4 dark:text-zinc-700 flex items-center justify-center self-center pt-1 font-bold tracking-wider" +
+          (offerPercentage && " bg-orange-300")
+        }>
+        {offerPercentage && offerPercentage}
+      </div>
       <img
         src={img}
         alt={title}
@@ -19,9 +26,9 @@ function Item({ img, title, price, offer, starCount }) {
             {price ? price + "تومان" : "فعلا موجود نیست"}
           </p>
         </div>
-        <actions className="flex flex-row justify-between mb-7">
+        <actions className="flex flex-row justify-between mb-7 items-center">
           <div className="flex flex-row">
-            <i className="hover:bg-gray-300 cursor-pointer rounded-full">
+            <i className="bg-gray-100 text-gray-400 active:bg-teal-600 active:text-white dark:bg-zinc-800 dark:active:bg-emerald-500  cursor-pointer rounded-full transition-all p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -36,7 +43,7 @@ function Item({ img, title, price, offer, starCount }) {
                 />
               </svg>
             </i>
-            <i className="mr-4 hover:bg-gray-300 rounded-full cursor-pointer">
+            <i className="mr-4 bg-white text-gray-400 active:text-teal-600 dark:bg-zinc-700 dark:active:text-emerald-500 rounded-full cursor-pointer transition-all p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
