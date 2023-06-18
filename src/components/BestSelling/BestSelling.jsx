@@ -56,7 +56,7 @@ function BestSelling({ state, setState }) {
             setState={setState}
             offerPercentage="12%"
             img={product1}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه فوری بن مانو 9 دقیقه ای"
             price="۱۷۵,۰۰۰"
             offer="۱۵۴,۰۰۰"
             starCount={5}
@@ -65,14 +65,14 @@ function BestSelling({ state, setState }) {
             state={state}
             setState={setState}
             img={product2}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه فوری بن مانو 6 دقیقه ای"
             starCount={4}
           />
           <Item
             state={state}
             setState={setState}
             img={product3}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه فوری بن مانو 8 دقیقه ای"
             price="۱۷۵,۰۰۰"
             starCount={4}
           />
@@ -80,7 +80,7 @@ function BestSelling({ state, setState }) {
             state={state}
             setState={setState}
             img={product4}
-            title="قهوه ترک بن مانو 250 گرم"
+            title="قهوه فوری بن مانو 2 دقیقه ای"
             price="۱۷۵,۰۰۰"
             starCount={4}
           />
