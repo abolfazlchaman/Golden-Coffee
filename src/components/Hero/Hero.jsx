@@ -1,9 +1,10 @@
 import Header from "../Header/Header";
 
-function Hero() {
+function Hero({ state }) {
   return (
     <section className="h-full">
       <Header
+        state={state}
         items={[
           { title: "صفحه اصلی", href: "#main" },
           { title: "فروشگاه", href: "#shop" },
