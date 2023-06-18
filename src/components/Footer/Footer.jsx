@@ -4,14 +4,21 @@ import logo2IMG from "../../assets/svgs/logo-type-white.svg";
 
 import telegramIMG from "../../assets/svgs/telegram.svg";
 import instagramIMG from "../../assets/svgs/instagram.svg";
+import { HashLink } from "react-router-hash-link";
 
 function Footer() {
   return (
-    <footer className="h-fit px-6 bg-zinc-700 pt-16 lg:px-20">
+    <footer
+      className="h-fit px-6 bg-zinc-700 pt-16 lg:px-20"
+      id="contact">
       <div
         className="max-w-screen hidden flex-row items-center justify-center lg:flex"
         style={{ position: "relative", top: "-80px" }}>
-        <button className="flex rounded-full w-7 h-7 border-2 bg-gray-100 border-orange-300 text-zinc-700 cursor-pointer rotate-180 items-center justify-center">
+        <HashLink
+          className="flex rounded-full w-7 h-7 border-2 bg-gray-100 border-orange-300 text-zinc-700 cursor-pointer rotate-180 items-center justify-center"
+          smooth
+          to="#main"
+          onClick={(e) => e.stopPropagation()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,7 +32,7 @@ function Footer() {
               d="M19.5 8.25l-7.5 7.5-7.5-7.5"
             />
           </svg>
-        </button>
+        </HashLink>
       </div>
       <div className="flex flex-col items-center lg:items-start lg:flex-row justify-between">
         <div className="w-full lg:w-2/6">
@@ -112,7 +119,7 @@ function Footer() {
                 </h6>
 
                 <h6 className="min-w-full items-center justify-end text-center flex flex-row">
-                  <p className="max-md:w-3/5 max-md:text-right">0902 123 6628  021 - 6789012</p>
+                  <p className="max-md:w-3/5 max-md:text-right">0902 123 6628 021 - 6789012</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -163,7 +170,9 @@ function Footer() {
           </a>
           .
         </p>
-        <p className="flex w-full mt-4 lg:mt-0 max-lg:items-center text-center max-lg:justify-center lg:justify-end">.Copyright © 2023 Golden Coffee. All rights reserved</p>
+        <p className="flex w-full mt-4 lg:mt-0 max-lg:items-center text-center max-lg:justify-center lg:justify-end">
+          .Copyright © 2023 Golden Coffee. All rights reserved
+        </p>
       </div>
     </footer>
   );

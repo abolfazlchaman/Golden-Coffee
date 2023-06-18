@@ -35,7 +35,8 @@ function Header({ items }) {
 
   return (
     <header
-      className="w-screen static pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px] "
+      className="w-screen static pt-20 lg:pt-0 h-fit lg:h-screen min-h-fit text-xl hero font-Dana text-[14px]"
+      id="main"
       onClick={(e) => {
         setIsCartOpen(false);
         setIsQuickPanelOpen(false);
@@ -51,7 +52,7 @@ function Header({ items }) {
             className=" w-9 h-9 mr-10"
             alt="logo"
           />
-          {items?.map((title, i) => (
+          {items?.map(({ title, href }, i) => (
             <div className="flex justify-center items-center  sm:mx-1 lg:mx-3 xl:mx-4">
               <HashLink
                 onClick={(e) => {
@@ -60,7 +61,7 @@ function Header({ items }) {
                 }}
                 smooth
                 key={title}
-                to="#"
+                to={href || "#"}
                 className={
                   `flex text-center items-center cursor-pointer hover:text-orange-300 transition-all ${
                     i === 0 && "text-orange-200"
@@ -386,7 +387,11 @@ function Header({ items }) {
         <div className="flex flex-row items-center justify-center border border-white border-opacity-25 w-[200px] h-[200px] rounded-full">
           <div className="flex flex-row items-center justify-center border border-white border-opacity-50 w-[145px] h-[145px] rounded-full">
             <div className="flex flex-row items-center justify-center border border-white border-opacity-90 w-[95px] h-[95px] rounded-full">
-              <button className="rounded-full w-7 h-7 border-2 bg-gray-100 border-orange-300 text-zinc-700 cursor-pointer flex items-center justify-center p-0 m-0">
+              <HashLink
+                smooth
+                className="rounded-full w-7 h-7 border-2 bg-gray-100 border-orange-300 text-zinc-700 cursor-pointer flex items-center justify-center p-0 m-0"
+                onClick={(e) => e.stopPropagation()}
+                to="#shop">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -400,7 +405,7 @@ function Header({ items }) {
                     d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                   />
                 </svg>
-              </button>
+              </HashLink>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ import icon4 from "../../assets/svgs/services/pitcher.svg";
 
 function Order() {
   return (
-    <div className="flex flex-col px-6 lg:px-40 dark:text-white">
+    <div className="flex flex-col px-6 lg:px-40 dark:text-white"  id="about">
       <div className="flex flex-col lg:flex-row items-center">
         <div className="mb-8 lg:mb-0">
           <img src={mainIMG} />

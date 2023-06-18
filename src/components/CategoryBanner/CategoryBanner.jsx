@@ -14,7 +14,7 @@ import Category from "../Category/Category";
 
 function CategoryBanner() {
   return (
-    <div className="mx-4 lg:mx-40">
+    <div className="mx-4 lg:mx-40" id="categories">
       <div className="flex flex-col lg:flex-row max-w-screen pb-20 gap-5">
         <Banner
           img={banner2IMG}

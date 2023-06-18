@@ -10,7 +10,7 @@ function NewProducts() {
   return (
     <section
       className="new-product"
-      id="new-products">
+      id="shop">
       <div className="mx-6 lg:mx-40 pb-20">
         <div className="flex flex-row w-full justify-between pt-8 lg:pt-48">
           <div className="flex flex-col">

@@ -7,7 +7,7 @@ import Article from "../Article/Article";
 
 function Blog() {
   return (
-    <div className="px-6 lg:px-40 p-20 pb-28">
+    <div className="px-6 lg:px-40 p-20 pb-28" id="blog">
       <div className="flex flex-row w-full justify-between pb-6 lg:pb-12">
         <div className="flex flex-col">
           <h4 className="font-MorabbaMedium text-xl lg:text-5xl text-zinc-700 lg:pb-12 dark:text-white">
