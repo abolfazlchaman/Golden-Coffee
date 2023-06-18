@@ -357,21 +357,22 @@ function Header({ items }) {
           </svg>
         </i>
       </nav>
-      <div className="relative h-full max-w-screen w-screen flex flex-col items-end justify-center text-end overflow-clip max-lg:overflow-x-hidden max-lg:overflow-y-clip lg:mt-0 lg:left-32 text-white z-10">
-        <div className="text-right max-lg:mx-8 max-lg:pr-16">
-          <p className="drop-shadow-lg font-MorabbaBold text-2xl lg:text-6xl pb-2 text-right">
-            قهوه عربیکا تانزانیا
-          </p>
-          <p className="drop-shadow-lg font-MorabbaLight text-md lg:text-5xl pb-6">
-            یک فنجان بالانس!
-          </p>
-          <div className="bg-[#EDB56A] w-24 h-0.5"></div>
-          <p className="drop-shadow-lg left-0 max-lg:w-[70vw] max-lg:min-w-[180px] max-lg:h-fit text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
-            قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
-            کمربند قهوه کشت میشود.
-          </p>
+        <div className="relative h-full max-w-[90vw] w-screen flex flex-col items-end justify-center text-end overflow-clip mt-6 max-lg:overflow-x-hidden max-lg:overflow-y-clip lg:mt-0 lg:left-32 text-white z-10">
+          <div className="text-right max-lg:mx-8 max-lg:pr-16">
+            <p className="drop-shadow-lg font-MorabbaBold text-2xl lg:text-6xl pb-2 text-right">
+              قهوه عربیکا تانزانیا
+            </p>
+            <p className="drop-shadow-lg font-MorabbaLight text-md lg:text-5xl pb-6">
+              یک فنجان بالانس!
+            </p>
+            <div className="bg-[#EDB56A] w-24 h-0.5"></div>
+            <p className="drop-shadow-lg left-0 max-lg:w-[70vw] max-lg:min-w-[180px] max-lg:h-fit text-sm lg:w-[28.75rem] font-normal pt-6 text-justify leading-8 h-40">
+              قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نحواحی مختلف
+              کمربند قهوه کشت میشود.
+            </p>
+          </div>
         </div>
-      </div>
+
       <div
         className="max-w-screen lg:flex flex-row items-center justify-center hidden"
         style={{ position: "relative", top: "-100px" }}>

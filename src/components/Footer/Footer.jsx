@@ -40,7 +40,7 @@ function Footer() {
               alt="logo2"
             />
           </div>
-          <p className="mt-10 text-justify font-Dana text-xl text-gray-300">
+          <p className="mt-10 text-justify font-Dana text-xl text-gray-300 max-lg:text-sm">
             ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی
             برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که
             نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق
@@ -77,7 +77,7 @@ function Footer() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 ml-2">
+                  className="w-10 h-10 ml-2">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -111,8 +111,8 @@ function Footer() {
                   </svg>
                 </h6>
 
-                <h6 className="min-w-full items-start justify-end text-center flex flex-row">
-                  <p>0902 123 6628 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 021 - 6789012</p>
+                <h6 className="min-w-full items-center justify-end text-center flex flex-row">
+                  <p className="max-md:w-3/5 max-md:text-right">0902 123 6628  021 - 6789012</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

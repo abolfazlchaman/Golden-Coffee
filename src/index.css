@@ -47,7 +47,7 @@
     @apply font-Dana;
   }
   .hero {
-    @apply bg-center object-contain lg:object-cover w-screen h-[390] max-w-full max-h-fit lg:max-h-[90vh] bg-[url("./assets/headerBgMobile.webp")] min-w-fit max-lg:pb-12 max-lg:mt-6 lg:bg-[url("./assets/headerBgDesktop.webp")] bg-no-repeat;
+    @apply bg-center object-contain lg:object-cover w-screen h-[390] max-w-full max-h-fit lg:max-h-[90vh] bg-[url("./assets/headerBgMobile.webp")] min-w-fit max-lg:pb-12 max-lg:mt-6 md:bg-[url("./assets/headerBgDesktop.webp")] bg-no-repeat;
   }
   .new-product {
     @apply bg-top lg:bg-[url("./assets/body-bg.png")] bg-contain max-w-full max-h-full bg-opacity-5  bg-no-repeat;
