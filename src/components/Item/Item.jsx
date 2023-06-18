@@ -2,7 +2,6 @@ import Star from "../icons/Star";
 
 function Item({ img, title, price, offer, starCount, offerPercentage, state, setState }) {
   const handleAddItem = () => {
-    console.log("ran");
     console.log(state);
     const newItem = { img, title, price, offer, starCount, offerPercentage };
     const existingItem = state.find((item) => item.title === newItem.title);
@@ -11,7 +10,7 @@ function Item({ img, title, price, offer, starCount, offerPercentage, state, set
       existingItem.count += 1;
       setState([...state]);
     } else {
-      setState((prevItems) => [...prevItems, { ...newItem, count: 1 }]);
+      newItem.price && setState((prevItems) => [...prevItems, { ...newItem, count: 1 }]);
     }
   };
 
