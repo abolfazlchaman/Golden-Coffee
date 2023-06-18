@@ -14,10 +14,10 @@ function Order() {
           <img src={mainIMG} />
         </div>
         <div className="flex flex-col pr-5">
-          <p className="font-MorabbaMedium text-3xl lg:text-5xl pb-[6px]">یکی از بهترین قهوه ها!</p>
-          <p className="font-MorabbaLight text-3xl pb-6">کیفیت قهوه را از ما بخواهید...</p>
-          <p className="font-MorabbaLight text-3xl">. . .</p>
-          <p className="font-MorabbaLight text-2xl py-6 text-justify">
+          <p className="font-MorabbaMedium text-2xl lg:text-5xl pb-[6px]">یکی از بهترین قهوه ها!</p>
+          <p className="font-MorabbaLight text-lg lg:text-3xl pb-6">کیفیت قهوه را از ما بخواهید...</p>
+          <p className="font-MorabbaLight lg:text-3xl">. . .</p>
+          <p className="font-MorabbaLight lg:text-2xl py-6 text-justify">
             فضای گرم و دنج ما را احساس کنید،جایی که همه میتوانند قهوه معطری پیدا کنند و دسرهایکه
             کاملا با قهوه داغ همراه شده است، امتحان کنند. فضای داخلی شیک و کارکنان خوش برخورد ما روز
             شما را میسازد!
