@@ -5,7 +5,7 @@ function Item({ img, title, price, offer, starCount, offerPercentage }) {
     <section className="w-5/11 lg:w-fit lg:min-w-[220px] h-fit w-fit max-h-[467px] shadow-md rounded-2xl bg-white dark:bg-zinc-700 dark:text-white flex-grow-3">
       <div
         className={
-          "w-14 h-7 rounded-full relative top-4 right-4 dark:text-zinc-700 flex items-center justify-center self-center pt-1 font-bold tracking-wider" +
+          "w-14 h-7 rounded-full relative top-4 text-white right-4 dark:text-zinc-700 flex items-center justify-center self-center pt-1 font-bold tracking-wider" +
           (offerPercentage && " bg-orange-300")
         }>
         {offerPercentage && offerPercentage}
