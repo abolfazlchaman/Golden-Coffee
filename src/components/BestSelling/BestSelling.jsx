@@ -57,8 +57,8 @@ function BestSelling({ state, setState }) {
             offerPercentage="12%"
             img={product1}
             title="قهوه فوری بن مانو 9 دقیقه ای"
-            price="۱۷۵,۰۰۰"
-            offer="۱۵۴,۰۰۰"
+            price="175,000"
+            offer="154,000"
             starCount={5}
           />
           <Item
@@ -73,7 +73,7 @@ function BestSelling({ state, setState }) {
             setState={setState}
             img={product3}
             title="قهوه فوری بن مانو 8 دقیقه ای"
-            price="۱۷۵,۰۰۰"
+            price="175,000"
             starCount={4}
           />
           <Item
@@ -81,7 +81,7 @@ function BestSelling({ state, setState }) {
             setState={setState}
             img={product4}
             title="قهوه فوری بن مانو 2 دقیقه ای"
-            price="۱۷۵,۰۰۰"
+            price="175,000"
             starCount={4}
           />
         </div>

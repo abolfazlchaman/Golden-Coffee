@@ -13,7 +13,10 @@ function App() {
 
   return (
     <main className="bg-gray-100 dark:bg-zinc-800 ">
-      <Hero state={cartItems} />
+      <Hero
+        state={cartItems}
+        setState={setCartItems}
+      />
       <NewProducts
         state={cartItems}
         setState={setCartItems}

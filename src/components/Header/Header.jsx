@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import mobileLogo from "../../assets/svgs/logo-type.svg";
 import CartItem from "../CartItem/CartItem";
 
-function Header({ items, state }) {
+function Header({ items, state, setState }) {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isQuickPanelOpen, setIsQuickPanelOpen] = useState(false);
@@ -98,6 +98,7 @@ function Header({ items, state }) {
             </i>
             {isCartOpen && (
               <div
+                // onClickCapture={(e) => e.stopPropagation()}
                 className={
                   "dark:bg-zinc-700 dark:text-white mt-10 fixed w-[25rem] flex-col justify-around items-center min-w-[25rem] lg:min-h-[19rem] min-h-fit shadow-lg bg-gray-50 border-t-[3px] border-t-[#F8B773] rounded-2xl justify-self-start overflow-y-auto" +
                   (state.length !== 0 && " min-w-fit h-fit max-h-screen")
@@ -138,11 +139,28 @@ function Header({ items, state }) {
                 ) : (
                   <div className="flex flex-col space-y-5 py-5 justify-center items-center h-fit text-black dark:text-white">
                     <div className="flex justify-between w-full px-5">
-                      <p>{state.length} مورد</p>
-                      <p>مشاهده سبد خرید</p>
+                      <p className="text-gray-300 text-sm">{state.length} مورد</p>
+                      <p className="flex flex-row text-orange-300 fill-orange-300 text-sm items-center">
+                        مشاهده سبد خرید
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-5 h-5">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15.75 19.5L8.25 12l7.5-7.5"
+                          />
+                        </svg>
+                      </p>
                     </div>
                     {state.map(({ img, title, price, offer, starCount, offerPercentage }) => (
                       <CartItem
+                        state={state}
+                        setState={setState}
                         img={img}
                         title={title}
                         price={price}
@@ -154,10 +172,18 @@ function Header({ items, state }) {
                     <div className="bg-gray-300 w-80 h-[1px]" />
                     <div className="flex flex-row font-DanaMedium w-full justify-between px-10">
                       <div className="flex flex-col">
-                        <p className="">مبلغ قابل پرداخت</p>
-                        <p className="">350,000 تومان</p>
+                        <p className="text-sm text-gray-400">مبلغ قابل پرداخت</p>
+
+                        <p>
+                          {state
+                            .reduce((acc, item) => {
+                              return acc + parseInt(item.price.replace(/,/g, "")) * item.count;
+                            }, 0)
+                            .toLocaleString()}
+                          تومان
+                        </p>
                       </div>
-                      <button className="flex items-center justify-between bg-teal-600 rounded-2xl px-4 text-white">
+                      <button className="flex font-Dana text-base items-center justify-between bg-teal-600 rounded-2xl px-4 text-white">
                         ثبت سفارش
                       </button>
                     </div>
