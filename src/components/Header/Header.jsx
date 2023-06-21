@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 import mobileLogo from "../../assets/svgs/logo-type.svg";
-import CartItem from "../CartItem/CartItem";
+import Cart from "../Cart/Cart";
 
 function Header({ items, state, setState }) {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
@@ -137,57 +137,10 @@ function Header({ items, state, setState }) {
                     </HashLink>
                   </>
                 ) : (
-                  <div className="flex flex-col space-y-5 py-5 justify-center items-center h-fit text-black dark:text-white">
-                    <div className="flex justify-between w-full px-5">
-                      <p className="text-gray-300 text-sm">{state.length} مورد</p>
-                      <p className="flex flex-row text-orange-300 fill-orange-300 text-sm items-center">
-                        مشاهده سبد خرید
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="currentColor"
-                          className="w-5 h-5">
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M15.75 19.5L8.25 12l7.5-7.5"
-                          />
-                        </svg>
-                      </p>
-                    </div>
-                    {state.map(({ img, title, price, offer, starCount, offerPercentage }) => (
-                      <CartItem
-                        state={state}
-                        setState={setState}
-                        img={img}
-                        title={title}
-                        price={price}
-                        offer={offer}
-                        starCount={starCount}
-                        offerPercentage={offerPercentage}
-                      />
-                    ))}
-                    <div className="bg-gray-300 w-80 h-[1px]" />
-                    <div className="flex flex-row font-DanaMedium w-full justify-between px-10">
-                      <div className="flex flex-col">
-                        <p className="text-sm text-gray-400">مبلغ قابل پرداخت</p>
-
-                        <p>
-                          {state
-                            .reduce((acc, item) => {
-                              return acc + parseInt(item.price.replace(/,/g, "")) * item.count;
-                            }, 0)
-                            .toLocaleString()}
-                          تومان
-                        </p>
-                      </div>
-                      <button className="flex font-Dana text-base items-center justify-between bg-teal-600 rounded-2xl px-4 text-white">
-                        ثبت سفارش
-                      </button>
-                    </div>
-                  </div>
+                  <Cart
+                    state={state}
+                    setState={setState}
+                  />
                 )}
               </div>
             )}
@@ -391,8 +344,8 @@ function Header({ items, state, setState }) {
       <nav className="lg:hidden w-screen max-w-screen h-20 justify-between bg-zinc-700 fixed top-0 flex flex-row items-center z-50 px-5">
         <i
           onClick={(e) => {
-            setIsMobileCartOpen(!isMobileCartOpen);
-            setIsMobileMenuOpen(false);
+            setIsMobileMenuOpen(!isMobileMenuOpen);
+            setIsMobileCartOpen(false);
             e.stopPropagation();
           }}>
           <svg
@@ -415,8 +368,8 @@ function Header({ items, state, setState }) {
         />
         <i
           onClick={(e) => {
-            setIsMobileMenuOpen(!isMobileMenuOpen);
-            setIsMobileCartOpen(false);
+            setIsMobileCartOpen(!isMobileCartOpen);
+            setIsMobileMenuOpen(false);
             e.stopPropagation();
           }}>
           <svg
@@ -433,6 +386,40 @@ function Header({ items, state, setState }) {
             />
           </svg>
         </i>
+        {isMobileCartOpen && (
+          <div
+            // onClickCapture={(e) => e.stopPropagation()}
+            className={
+              "dark:bg-zinc-700 h-screen fixed dark:text-white left-0 top-0 flex-col items-center min-w-64 w-2/3 min-h-fit shadow-lg bg-gray-50 justify-center overflow-y-auto" +
+              (state.length !== 0 && " min-w-fit h-fit max-h-screen")
+            }>
+            {state.length === 0 ? (
+              <div className="flex flex-col items-center justify-center gap-4 w-full max-w-full h-full text-lg p-4">
+                <h2 className="font-Dana text-zinc-700 dark:text-white text-center">
+                  هنوز محصولی به سبد خرید اضافه نشده
+                </h2>
+                <HashLink
+                  to="/#shop"
+                  smooth
+                  className="no-underline text-inherit w-40"
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    setIsMobileCartOpen(false);
+                    e.stopPropagation();
+                  }}>
+                  <button className="rounded-xl bg-teal-600 font-Dana text-sm text-white w-48 h-12 flex items-center justify-center mb-12 max-w-full">
+                    مشاهده صفحه فروشگاه
+                  </button>
+                </HashLink>
+              </div>
+            ) : (
+              <Cart
+                state={state}
+                setState={setState}
+              />
+            )}
+          </div>
+        )}
       </nav>
       <div className="relative h-full max-w-[90vw] w-screen flex flex-col items-end justify-center text-end overflow-clip mt-6 max-lg:overflow-x-hidden max-lg:overflow-y-clip lg:mt-0 lg:left-32 text-white z-10">
         <div className="text-right max-lg:mx-8 max-lg:pr-16">
