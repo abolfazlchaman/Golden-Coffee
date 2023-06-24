@@ -5,6 +5,7 @@ import product1 from "../../assets/products/p1.png";
 import product2 from "../../assets/products/p2.png";
 import product3 from "../../assets/products/p3.png";
 import product4 from "../../assets/products/p4.png";
+import { HashLink } from "react-router-hash-link";
 
 function NewProducts({ state, setState }) {
   return (
@@ -22,7 +23,7 @@ function NewProducts({ state, setState }) {
             </h5>
           </div>
           <div className="flex flex-row items-center mb-2 text-orange-300 cursor-pointer">
-            <h6 className="font-Dana max-md:text-[10px]">مشاهده همه محصولات</h6>
+            <HashLink className="font-Dana max-md:text-[14px] text-center">مشاهده همه محصولات</HashLink>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
