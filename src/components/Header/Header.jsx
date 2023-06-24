@@ -4,6 +4,8 @@ import { HashLink } from "react-router-hash-link";
 import mobileLogo from "../../assets/svgs/logo-type.svg";
 import Cart from "../Cart/Cart";
 
+import MobileMenu from "../MobileMenu/MobileMenu";
+
 function Header({ items, state, setState }) {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -341,7 +343,7 @@ function Header({ items, state, setState }) {
         </div>
       </nav>
       {/* mobile nav */}
-      <nav className="lg:hidden w-screen max-w-screen h-20 justify-between bg-zinc-700 fixed top-0 flex flex-row items-center z-50 px-5">
+      <nav className="lg:hidden w-screen max-w-screen h-20 justify-between bg-white dark:bg-zinc-700 fixed top-0 flex flex-row items-center z-50 px-5 md:px-8">
         <i
           onClick={(e) => {
             setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -354,7 +356,7 @@ function Header({ items, state, setState }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-10 h-10 stroke-white">
+            className="w-10 h-10 stroke-zinc-700 dark:stroke-white">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -378,7 +380,7 @@ function Header({ items, state, setState }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="fill-white"
-            className="w-10 h-10 stroke-white">
+            className="w-10 h-10 stroke-zinc-700 dark:stroke-white">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -418,6 +420,17 @@ function Header({ items, state, setState }) {
                 setState={setState}
               />
             )}
+          </div>
+        )}
+        {isMobileMenuOpen && (
+          <div className="flex flex-col items-center justify-center gap-4 w-full max-w-full h-full text-lg p-4">
+            <MobileMenu
+              themeMode={themeMode}
+              setThemeMode={setThemeMode}
+              isLoggedIn={isLoggedIn}
+              setIsLoggedIn={setIsLoggedIn}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+            />
           </div>
         )}
       </nav>
