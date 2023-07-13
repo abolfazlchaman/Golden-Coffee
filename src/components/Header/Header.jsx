@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 
 import mobileLogo from "../../assets/svgs/logo-type.svg";
 import Cart from "../Cart/Cart";
+import mainLogo from "/src/assets/app-logo.png";
 
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -50,7 +51,7 @@ function Header({ items, state, setState }) {
       <nav className="w-[90%] hidden mx-auto shadow-shadow-normal rounded-3xl justify-between bg-black/50 backdrop-blur-[6px] fixed lg:flex flex-row top-[.5rem] left-0 right-0 h-[4rem] max-h-[96px] items-center z-50">
         <div className="flex flex-row">
           <img
-            src="./src/assets/app-logo.png"
+            src={mainLogo}
             className=" w-9 h-9 mr-10"
             alt="logo"
           />
@@ -106,38 +107,38 @@ function Header({ items, state, setState }) {
                   (state.length !== 0 && " min-w-fit h-fit max-h-screen")
                 }>
                 {state.length === 0 ? (
-                    <div className="flex flex-col justify-center items-center">
-                      <i className="pt-12">
-                        <svg
-                          className=" fill-gray-400 stroke-gray-400"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="54"
-                          height="54"
-                          viewBox="0 0 15 15">
-                          <path
-                            fill="none"
-                            // stroke="currentColor"
-                            d="m.5.5l.6 2m0 0l2.4 8h11v-6a2 2 0 0 0-2-2H1.1Zm11.4 12a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-8-1a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z"
-                          />
-                        </svg>
-                      </i>
-                      <h2 className="font-Dana text-zinc-700 dark:text-white my-4">
-                        هنوز محصولی به سبد خرید اضافه نشده
-                      </h2>
-                      <HashLink
-                        to="/#shop"
-                        smooth
-                        className="no-underline text-inherit"
-                        onClick={(e) => {
-                          setIsQuickPanelOpen(false);
-                          setIsCartOpen(false);
-                          e.stopPropagation();
-                        }}>
-                        <button className="rounded-xl bg-teal-600 font-Dana text-white w-64 h-14 flex items-center justify-center mb-12">
-                          مشاهده صفحه فروشگاه
-                        </button>
-                      </HashLink>
-                    </div>
+                  <div className="flex flex-col justify-center items-center">
+                    <i className="pt-12">
+                      <svg
+                        className=" fill-gray-400 stroke-gray-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="54"
+                        height="54"
+                        viewBox="0 0 15 15">
+                        <path
+                          fill="none"
+                          // stroke="currentColor"
+                          d="m.5.5l.6 2m0 0l2.4 8h11v-6a2 2 0 0 0-2-2H1.1Zm11.4 12a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-8-1a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z"
+                        />
+                      </svg>
+                    </i>
+                    <h2 className="font-Dana text-zinc-700 dark:text-white my-4">
+                      هنوز محصولی به سبد خرید اضافه نشده
+                    </h2>
+                    <HashLink
+                      to="/#shop"
+                      smooth
+                      className="no-underline text-inherit"
+                      onClick={(e) => {
+                        setIsQuickPanelOpen(false);
+                        setIsCartOpen(false);
+                        e.stopPropagation();
+                      }}>
+                      <button className="rounded-xl bg-teal-600 font-Dana text-white w-64 h-14 flex items-center justify-center mb-12">
+                        مشاهده صفحه فروشگاه
+                      </button>
+                    </HashLink>
+                  </div>
                 ) : (
                   <Cart
                     state={state}
