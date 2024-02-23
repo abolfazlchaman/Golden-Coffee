@@ -103,7 +103,7 @@ function Header({ items, state, setState }) {
               <div
                 // onClickCapture={(e) => e.stopPropagation()}
                 className={
-                  "dark:bg-zinc-700 dark:text-white mt-10 fixed w-[25rem] flex-col justify-around items-center min-w-[25rem] lg:min-h-[19rem] min-h-fit shadow-lg bg-gray-50 border-t-[3px] border-t-[#F8B773] rounded-2xl justify-self-start overflow-y-auto" +
+                  "dark:bg-zinc-700 dark:text-white mt-10 fixed w-[25rem] flex-col justify-around items-center min-w-[25rem] min-h-fit shadow-lg bg-gray-50 border-t-[3px] border-t-[#F8B773] rounded-2xl justify-self-start overflow-y-auto" +
                   (state.length !== 0 && " min-w-fit h-fit max-h-screen")
                 }>
                 {state.length === 0 ? (
