@@ -28,6 +28,11 @@ function CartItem({ img, title, price, offer, starCount, offerPercentage, state,
       })
     );
   };
+
+  const handleRemove = (title) => {
+    setState((prevItems) => prevItems.filter((item) => item.title !== title));
+  };
+
   return (
     <>
       <section
@@ -51,7 +56,7 @@ function CartItem({ img, title, price, offer, starCount, offerPercentage, state,
         </div>
         <div className="mx-5 w-full">
           <p className="mt-2.5 text-sm lg:text-md px-2">{title}</p>
-          <div className="flex flex-row lg:flex-row items-center h-fit w-48 min-w-full justify-between gap-3">
+          <div className="ml-[10px] flex flex-row lg:flex-row items-center h-fit w-48 min-w-full justify-between gap-3">
             {/* {offer && <p className="ml-2.5">{offer} تومان</p>} */}
             <div className="flex flex-col items-right my-2 items-center text-teal-600 justify-between h-fit text-right w-48">
               <div className="flex flex-row items-center gap-3 lg:ml-4 justify-between min-w-full">
@@ -67,7 +72,7 @@ function CartItem({ img, title, price, offer, starCount, offerPercentage, state,
                   <div className="border border-gray-300 rounded-full text-orange-300 flex items-center justify-around py-1 p-2">
                     <i
                       className="cursor-pointer"
-                      onClick={() => handleDecrease(item.title)}>
+                      onClick={() => handleDecrease(title)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -85,7 +90,7 @@ function CartItem({ img, title, price, offer, starCount, offerPercentage, state,
                     {state?.find((item) => item?.title === title)?.count}
                     <i
                       className="cursor-pointer"
-                      onClick={() => handleIncrease(item.title)}>
+                      onClick={() => handleIncrease(title)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -105,8 +110,8 @@ function CartItem({ img, title, price, offer, starCount, offerPercentage, state,
               </div>
             </div>
             <i
-              className="bg-gray-100 text-gray-400 active:bg-teal-600 active:text-white dark:bg-zinc-800 dark:active:bg-emerald-500  w-fit cursor-pointer rounded-full transition-all p-2 h-fit justify-end"
-              onClick={() => console.log("removed")}>
+              className=" bg-gray-100 text-gray-400 active:bg-teal-600 active:text-white dark:bg-zinc-800 dark:active:bg-emerald-500  w-fit cursor-pointer rounded-full transition-all p-2 h-fit justify-end"
+              onClick={() => handleRemove(title)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
