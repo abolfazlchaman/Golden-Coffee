@@ -59,16 +59,16 @@ function Footer() {
 
           <div className="flex xl:flex-row lg:flex-col gap-8">
             <div className="flex flex-col font-Dana text-sm items-start justify-center  space-y-8">
-              <h6>- حریم خصوصی</h6>
-              <h6>- عودت کالا</h6>
-              <h6>- شرایط استفاده</h6>
-              <h6>- ثبت سفارش</h6>
+              <h6 className="cursor-pointer">- حریم خصوصی</h6>
+              <h6 className="cursor-pointer">- عودت کالا</h6>
+              <h6 className="cursor-pointer">- شرایط استفاده</h6>
+              <h6 className="cursor-pointer">- ثبت سفارش</h6>
             </div>
             <div className="flex flex-col font-Dana text-sm items-start justify-center  space-y-8">
-              <h6>- پرسش های متداول</h6>
-              <h6 className="text-orange-300">- فرصت های شغلی</h6>
-              <h6>- ضمانت نامه ها</h6>
-              <h6>- ارتباط با ما</h6>
+              <h6 className="cursor-pointer">- پرسش های متداول</h6>
+              <h6 className="text-orange-300 cursor-pointer">- فرصت های شغلی</h6>
+              <h6 className="cursor-pointer">- ضمانت نامه ها</h6>
+              <h6 className="cursor-pointer">- ارتباط با ما</h6>
             </div>
           </div>
         </div>
@@ -138,22 +138,30 @@ function Footer() {
               <div
                 className="flex flex-row flex-wrap justify-center gap-6 font-DanaMedium items-center"
                 dir="ltr">
-                <button className="text-zinc-700 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2 from-orange-300 to-orange-300 bg-gradient-to-bl">
-                  @golden_coffee
-                  <img
-                    className="fill-zinc-700 text-zinc-700 stroke-zinc-700"
-                    src={telegramIMG}
-                    alt="telegram"
-                  />
-                </button>
-                <button className="text-orange-300 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2">
-                  @golden_coffee
-                  <img
-                    className="fill-orange-300 text-orange-300"
-                    src={instagramIMG}
-                    alt="instagram"
-                  />
-                </button>
+                <a
+                  href="https://www.telegram.org/"
+                  target="_blank">
+                  <button className="text-zinc-700 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2 from-orange-300 to-orange-300 bg-gradient-to-bl">
+                    @golden_coffee
+                    <img
+                      className="fill-zinc-700 text-zinc-700 stroke-zinc-700"
+                      src={telegramIMG}
+                      alt="telegram"
+                    />
+                  </button>
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank">
+                  <button className="text-orange-300 border-orange-300 border rounded-xl flex flex-row items-center min-w-fit p-2">
+                    @golden_coffee
+                    <img
+                      className="fill-orange-300 text-orange-300"
+                      src={instagramIMG}
+                      alt="instagram"
+                    />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -171,7 +179,7 @@ function Footer() {
           .
         </p>
         <p className="flex w-full mt-4 lg:mt-0 max-lg:items-center text-center max-lg:justify-center lg:justify-end">
-          .Copyright © 2023 Golden Coffee. All rights reserved
+          .Copyright © {new Date().getFullYear() || "2024"} Golden Coffee. All rights reserved
         </p>
       </div>
     </footer>
