@@ -1,6 +1,6 @@
 function Article({ img, title, date }) {
   return (
-    <div className="flex flex-row lg:flex-col w-screen lg:w-1/5 bg-white shadow-lg rounded-2xl overflow-hidden dark:bg-zinc-700">
+    <div className="flex flex-row lg:flex-col w-screen lg:w-1/5 bg-white shadow-lg rounded-2xl overflow-hidden dark:bg-zinc-700 cursor-pointer">
       <img
         className="p-2.5 rounded-2xl rounded-bl-4xl lg:rounded-3xl w-1/2 lg:w-auto object-cover"
         src={img}
